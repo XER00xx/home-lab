@@ -5,9 +5,12 @@ Active Directory and security concepts.
 
 ## Network Diagram
 
-[DC01 192.168.10.1] ----[Win10 192.168.10.2]  
-        |
+```
+[DC01 192.168.10.1] ──── [Win10 192.168.10.2]
+         │
+         │
 [Ubuntu 192.168.10.3]
+```
 
 ## Environment
 | Machine         | OS                    | IP           | Role              |
