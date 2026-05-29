@@ -34,3 +34,14 @@ sudo hping3 -S --flood -V -p 80 192.168.10.1
 - How to detect DDoS traffic using Wireshark
 - Difference between normal and malicious traffic
 - Importance of network monitoring in NOC/SOC
+
+## Screenshots
+
+![hping3 Attack](ss1.jpg)
+*SYN Flood attack running on Ubuntu Server using hping3*
+
+![Wireshark Capture](ss2.jpg)
+*Wireshark showing flood of SYN packets from attacker 192.168.10.3*
+
+![Task Manager](ss3.jpg)
+*Windows Server network and CPU usage spike during DDoS attack*
