@@ -27,3 +27,9 @@ password-based login.
 - Passwordless SSH authentication working ✅
 - RSA 4096-bit encryption ✅
 - Public key authentication ✅
+
+## Screenshots
+
+![SSH Login from PowerShell](ss9.jpg)
+![SSH Keys on Ubuntu](ss12.jpg)
+![Ubuntu Prompt in PowerShell](ss13.jpg)
