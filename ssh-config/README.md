@@ -29,7 +29,11 @@ password-based login.
 - Public key authentication ✅
 
 ## Screenshots
-
 ![SSH Login from PowerShell](ss9.jpg)
+*SSH connection initiated from Windows 10 PowerShell*
+
 ![SSH Keys on Ubuntu](ss12.jpg)
+*RSA key pair and authorized_keys file on Ubuntu Server*
+
 ![Ubuntu Prompt in PowerShell](ss13.jpg)
+*Passwordless SSH authentication — logged into Ubuntu without password*
