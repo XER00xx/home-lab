@@ -38,5 +38,5 @@ Active Directory and security concepts.
 - SSH key authentication vs password authentication
 - Linux CLI administration
 - GPO configuration and verification
-- 
+  
 
