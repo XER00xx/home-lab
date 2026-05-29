@@ -23,7 +23,11 @@ using VirtualBox Internal Network.
 - Windows 10 ↔ Ubuntu: ✅
 
 ## Screenshots
-
 ![Ping from Windows 10](ss8.jpg)
-![Ping from Ubuntu](ss11.jpg)
+*Successful ping from Windows 10 to Domain Controller*
+
 ![Ubuntu IP Configuration](ss10.jpg)
+*Ubuntu Server network interfaces — NAT and static IP configured*
+
+![Ping from Ubuntu](ss11.jpg)
+*Successful ping from Ubuntu Server to Domain Controller*
