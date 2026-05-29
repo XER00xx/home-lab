@@ -22,10 +22,20 @@ Deployed Active Directory Domain Services on Windows Server 2022.
   - Password complexity: Enabled
 
 ## Screenshots
-
 ![AD Users](ss1.jpg)
+*Active Directory users created in homelab.local domain*
+
 ![OU Structure](ss2.jpg)
+*Organizational Units — IT_Department and HR_Department*
+
 ![GPO](ss3.jpg)
+*IT_Security_Policy GPO linked to IT_Department*
+
 ![Server IP](ss4.jpg)
-![GPO Result](ss7.jpg)
+*Windows Server 2022 static IP configuration — 192.168.10.1*
+
 ![Domain Properties](ss6.jpg)
+*Windows 10 joined to homelab.local domain*
+
+![GPO Result](ss7.jpg)
+*GPO successfully applied on domain client — verified with gpresult*
