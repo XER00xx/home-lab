@@ -26,6 +26,8 @@ Active Directory and security concepts.
   — internal network, static IPs
 - [SSH Key Authentication](./ssh-config/README.md) 
   — passwordless login, RSA keys
+- [DDoS Simulation](./ddos-simulation/README.md)
+  — SYN Flood attack, Wireshark detection, hping3
 
 ## Skills Practiced
 - Active Directory administration
