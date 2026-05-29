@@ -20,3 +20,12 @@ Deployed Active Directory Domain Services on Windows Server 2022.
 - IT_Security_Policy applied to IT_Department
   - Minimum password length: 8 characters
   - Password complexity: Enabled
+
+## Screenshots
+
+![AD Users](ss1.jpg)
+![OU Structure](ss2.jpg)
+![GPO](ss3.jpg)
+![Server IP](ss4.jpg)
+![GPO Result](ss7.jpg)
+![Domain Properties](ss6.jpg)
