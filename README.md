@@ -34,7 +34,7 @@ Active Directory and security concepts.
 - Windows Server 2022 administration
 - Linux CLI (Ubuntu Server)
 - VirtualBox virtualization
-- 
+  
 ## What I Learned
 - How Active Directory manages users and permissions
 - Network segmentation using VirtualBox
