@@ -21,3 +21,9 @@ using VirtualBox Internal Network.
 - Windows Server ↔ Windows 10: ✅
 - Windows Server ↔ Ubuntu: ✅
 - Windows 10 ↔ Ubuntu: ✅
+
+## Screenshots
+
+![Ping from Windows 10](ss8.jpg)
+![Ping from Ubuntu](ss11.jpg)
+![Ubuntu IP Configuration](ss10.jpg)
