@@ -24,7 +24,7 @@ Deployed Active Directory Domain Services on Windows Server 2022.
 ## Real-World Relevance
 Active Directory manages authentication and authorization
 for 90% of enterprise environments. This lab demonstrates
-core AD skills required in NOC/SOC roles — user management,
+core AD skills required in IT roles — user management,
 OU structure, and Group Policy enforcement.
 
 ## Screenshots
