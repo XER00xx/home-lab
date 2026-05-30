@@ -28,6 +28,8 @@ Active Directory and security concepts.
   — passwordless login, RSA keys
 - [DDoS Simulation](./ddos-simulation/README.md)
   — SYN Flood attack, Wireshark detection, hping3
+- [Zabbix Monitoring](./zabbix-monitoring/README.md)
+  — Zabbix 7.0, 3 hosts monitored, CPU alerts, DDoS detection
 
 ## Skills Practiced
 - Active Directory administration
