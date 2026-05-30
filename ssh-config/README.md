@@ -28,6 +28,12 @@ password-based login.
 - RSA 4096-bit encryption ✅
 - Public key authentication ✅
 
+## Real-World Relevance
+SSH key authentication is the industry standard for
+secure remote access in enterprise environments.
+Password-based SSH is considered insecure in production —
+key-based auth eliminates brute-force attack vectors.
+
 ## Screenshots
 ![SSH Login from PowerShell](ss9.jpg)
 *SSH connection initiated from Windows 10 PowerShell*
