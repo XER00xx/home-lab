@@ -35,6 +35,13 @@ sudo hping3 -S --flood -V -p 80 192.168.10.1
 - Difference between normal and malicious traffic
 - Importance of network monitoring in NOC/SOC
 
+## Detection
+Attack was also detected in real-time using Zabbix monitoring:
+- CPU spike visible on Windows Server 2022 dashboard
+- Automatic alert triggered when threshold exceeded
+- Demonstrates full attack → detection → alert pipeline
+See: [Zabbix Monitoring](../zabbix-monitoring/README.md)
+
 ## Screenshots
 
 ![hping3 Attack](ss1.jpg)
