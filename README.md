@@ -38,6 +38,10 @@ Active Directory and security concepts.
 - Windows Server 2022 administration
 - Linux CLI (Ubuntu Server)
 - VirtualBox virtualization
+- Zabbix 7.0 monitoring and alerting
+- DDoS attack simulation and detection
+- Wireshark network traffic analysis
+- Incident detection and alert configuration
   
 ## What I Learned
 - How Active Directory manages users and permissions
@@ -45,5 +49,9 @@ Active Directory and security concepts.
 - SSH key authentication vs password authentication
 - Linux CLI administration
 - GPO configuration and verification
+- How NOC monitors infrastructure in real time
+- How to correlate network attacks with system metrics
+- How automated alerting works in enterprise environments
+- How DDoS traffic appears in monitoring tools
   
 
