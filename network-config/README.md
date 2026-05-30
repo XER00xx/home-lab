@@ -21,6 +21,11 @@ using VirtualBox Internal Network.
 - Windows Server ↔ Windows 10: ✅
 - Windows Server ↔ Ubuntu: ✅
 - Windows 10 ↔ Ubuntu: ✅
+  
+## Real-World Relevance
+Network segmentation using VLANs and static IP addressing
+mirrors enterprise network design. Understanding IP routing
+and subnet configuration is fundamental for everyday role and job of It personale.
 
 ## Screenshots
 ![Ping from Windows 10](ss8.jpg)
