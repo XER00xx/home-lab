@@ -20,6 +20,12 @@ Deployed Active Directory Domain Services on Windows Server 2022.
 - IT_Security_Policy applied to IT_Department
   - Minimum password length: 8 characters
   - Password complexity: Enabled
+    
+## Real-World Relevance
+Active Directory manages authentication and authorization
+for 90% of enterprise environments. This lab demonstrates
+core AD skills required in NOC/SOC roles — user management,
+OU structure, and Group Policy enforcement.
 
 ## Screenshots
 ![AD Users](ss1.jpg)
