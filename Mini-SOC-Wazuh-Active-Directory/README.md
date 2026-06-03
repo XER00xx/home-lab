@@ -82,10 +82,10 @@ Wazuh agents were deployed on both Windows machines (DC01 and WIN10) and connect
 - `4625` — Logon Failure
 - `4688` — Process Creation
 
-**Screenshot — !(Screenshots/ss1.jpg)
+**Screenshot — ![Wazuh services active and running on Ubuntu Server](Screenshots/ss1.jpg)
 > Terminal output on Ubuntu Server showing all three Wazuh components (`wazuh-manager`, `wazuh-indexer`, `wazuh-dashboard`) in `active (running)` state — confirming successful deployment.
 
-**Screenshot — `ss5.jpg`**
+**Screenshot — ![Wazuh Dashboard after first login with agents connected](Screenshots/ss5.jpg)
 > Wazuh Dashboard home page after first login showing both agents (DC01 and WIN10) connected and actively forwarding logs.
 
 ---
@@ -96,10 +96,10 @@ A password spraying attack was launched from Kali Linux (192.168.10.4) against a
 
 **MITRE ATT&CK:** [T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
 
-**Screenshot — `ss8.jpg`**
+**Screenshot — ![Password Spraying attack executed from Kali Linux via CrackMapExec](Screenshots/ss8.jpg)**
 > Kali Linux terminal showing CrackMapExec executing a spray against the domain — multiple `[-]` failures visible for each user account, generating Event ID 4625 on the Domain Controller.
 
-**Screenshot — `ss9.jpg`**
+**Screenshot — ![Wazuh detecting multiple failed logon attempts - Event ID 4625](Screenshots/ss9.jpg)**
 > Wazuh Security Events view filtered to show a spike of Event ID 4625 (Logon Failure) events — all sourced from attacker IP 192.168.10.4 within a short timeframe, triggering custom rule 100002 (Multiple Failed Logon Attempts).
 
 ---
@@ -117,10 +117,10 @@ Get-LocalUser
 Get-ComputerInfo
 ```
 
-**Screenshot — `ss10.jpg`**
+**Screenshot — ![PowerShell reconnaissance commands executed on WIN10 workstation](Screenshots/ss10.jpg)**
 > PowerShell terminal on WIN10 showing the execution of recon commands. Event ID 4688 (Process Creation) was generated for each command, captured by the Wazuh agent and forwarded to SIEM.
 
-**Screenshot — `ss11.png`**
+**Screenshot — ![Wazuh custom rule 100001 triggering on suspicious PowerShell execution](Screenshots/ss11.jpg)**
 > Wazuh alert dashboard showing custom rule 100001 firing — "Suspicious PowerShell Execution Detected" — with the full command-line visible in the event details.
 
 ---
@@ -135,7 +135,7 @@ Invoke-AtomicTest T1059.001
 Invoke-AtomicTest T1003
 ```
 
-**Screenshot — `ss13.jpg`**
+**Screenshot — ![Atomic Red Team Invoke-AtomicTest execution on WIN10](Screenshots/ss13.jpg)**
 > PowerShell terminal on WIN10 showing Atomic Red Team test execution output — each test generates specific Windows event log entries that Wazuh captures and maps to MITRE ATT&CK techniques.
 
 ---
@@ -153,13 +153,13 @@ impacket-GetUserSPNs homelab.local/admin -dc-ip 192.168.10.1 -request
 
 **Result:** `$krb5tgs$23$*sqlsvc$HOMELAB.LOCAL$...` hash obtained and cracked with Hashcat.
 
-**Screenshot — `ss15.jpg`**
+**Screenshot — ![SPN registered for sqlsvc service account on Domain Controller](Screenshots/ss15.jpg)**
 > PowerShell on DC01 confirming SPN registration for the `sqlsvc` service account using `setspn -L sqlsvc`. This is the prerequisite for a Kerberoasting attack.
 
-**Screenshot — `ss16.jpg`**
+**Screenshot — ![Impacket GetUserSPNs returning krb5tgs hash for sqlsvc account](Screenshots/ss16.jpg)**
 > Kali Linux terminal showing Impacket's GetUserSPNs output — `sqlsvc` account discovered with SPN, and the full `$krb5tgs$23$` hash returned. This hash represents a stolen Kerberos service ticket.
 
-**Screenshot — `ss17.jpg`**
+**Screenshot — ![Hashcat cracking RC4 Kerberos TGS hash offline - password recovered](Screenshots/ss17.jpg)**
 > Wazuh Security Events showing Event,showing the RC4 hash being cracked and ID 4769 (Kerberos Service Ticket Requested) with RC4 encryption type (0x17) — triggering custom rule 100003 "Possible Kerberoasting Attack".
 
 ---
@@ -204,7 +204,7 @@ Three custom rules were written and deployed in `/var/ossec/etc/rules/local_rule
 </group>
 ```
 
-**Screenshot — `ss19.jpg`**
+**Screenshot —![Wazuh custom rule 100003 triggering on Kerberoasting - Event ID 4769 RC4](Screenshots/ss19.jpg)**
 > nano editor on Ubuntu Server showing the `local_rules.xml` file with all three custom rules — demonstrating the ability to write and deploy custom SIEM detection logic beyond out-of-the-box capabilities.
 
 ---
@@ -230,7 +230,7 @@ A custom OpenSearch dashboard was built to provide visual insight into the secur
 - MITRE ATT&CK Techniques (data table)
 - Alert Severity Levels (bar chart)
 
-**Screenshot — `ss20.jpg`**
+**Screenshot — ![Custom Wazuh detection rules and OpenSearch dashboard overview](Screenshots/ss20.jpg)**
 > Full Wazuh OpenSearch dashboard showing all four panels populated with data from the attack simulation — providing an at-a-glance view of the security posture across the homelab.local environment.
 
 ---
