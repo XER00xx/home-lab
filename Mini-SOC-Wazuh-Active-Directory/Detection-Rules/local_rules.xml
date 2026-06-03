@@ -1,1 +1,33 @@
+<group name="windows,security,custom">
 
+  <!-- Rule 1: Suspicious PowerShell Execution -->
+  <rule id="100001" level="10">
+    <if_group>windows</if_group>
+    <field name="win.eventdata.commandLine" type="pcre2">(?i)powershell</field>
+    <description>Suspicious PowerShell Execution Detected</description>
+    <mitre>
+      <id>T1059.001</id>
+    </mitre>
+  </rule>
+
+  <!-- Rule 2: Multiple Failed Logons *Brute Force) -->
+  <rule id="100002" level="12" frequency="5" timeframe="60">
+    <if_matched_sid>60122</if_matched_sid>
+    <description>Multiple Failed Logon Attempts - Possible Brute Force</description>
+    <mitre>
+      <id>T1110</id>
+    </mitre>
+  </rule>
+
+  <!-- Rule 3: Kerberoasting Detection -->
+  <rule id="100003" level="14">
+    <if_group>windows</if_group>
+    <field name="win.system.eventID">^4769$</field>
+    <field name="win.eventdata.ticketEncryptionType">^0x17$</field>
+    <description>Possible Kerberoasting Attack - RC4 Ticket Requested</description>
+    <mitre>
+      <id>T1558.003</id>
+    </mitre>
+  </rule>
+
+</group>
