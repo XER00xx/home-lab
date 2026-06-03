@@ -30,6 +30,8 @@ Active Directory and security concepts.
   — SYN Flood attack, Wireshark detection, hping3
 - [Zabbix Monitoring](./zabbix-monitoring/README.md)
   — Zabbix 7.0, 3 hosts monitored, CPU alerts, DDoS detection
+- [Mini SOC](./Active Directory Attack Detection with Wazuh)
+  — full attack simulation on AD, Wazuh SIEM, MITRE ATT&CK, custom detection rules, incident report
 
 ## Skills Practiced
 - Active Directory administration
