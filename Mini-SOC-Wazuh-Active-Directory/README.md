@@ -82,7 +82,7 @@ Wazuh agents were deployed on both Windows machines (DC01 and WIN10) and connect
 - `4625` — Logon Failure
 - `4688` — Process Creation
 
-**Screenshot — `/Screenshots/ss1.jpg`**
+**Screenshot — `(Screenshots/ss1.jpg)`**
 > Terminal output on Ubuntu Server showing all three Wazuh components (`wazuh-manager`, `wazuh-indexer`, `wazuh-dashboard`) in `active (running)` state — confirming successful deployment.
 
 **Screenshot — `ss5.jpg`**
