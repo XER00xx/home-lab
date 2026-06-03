@@ -78,10 +78,10 @@ SVC:    sqlsvc (Kerberoasting target — SPN: MSSQLSvc/dc01.homelab.local:1443)
 Wazuh agents were deployed on both Windows machines (DC01 and WIN10) and connected to the central Wazuh Manager. Baseline event collection was verified by confirming the appearance of Windows Security Event IDs in the dashboard.
 
 
-**Screenshot — ![Wazuh services active and running on Ubuntu Server](Screenshots/ss1.jpg)
+**Screenshot — ![Wazuh services active and running on Ubuntu Server](Screenshots/ss1.jpg)**
 > Terminal output on Ubuntu Server showing all three Wazuh components (`wazuh-manager`, `wazuh-indexer`, `wazuh-dashboard`) in `active (running)` state — confirming successful deployment.
 
-**Screenshot — ![Wazuh Dashboard after first login with agents connected](Screenshots/ss5.jpg)
+**Screenshot — ![Wazuh Dashboard after first login with agents connected](Screenshots/ss5.jpg)**
 > Wazuh Dashboard home page after first login showing both agents (DC01 and WIN10) connected and actively forwarding logs.
 
 ---
