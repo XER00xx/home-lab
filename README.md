@@ -30,7 +30,7 @@ Active Directory and security concepts.
   — SYN Flood attack, Wireshark detection, hping3
 - [Zabbix Monitoring](./zabbix-monitoring/README.md)
   — Zabbix 7.0, 3 hosts monitored, CPU alerts, DDoS detection
-- [Mini SOC](./Active Directory Attack Detection with Wazuh)
+- [Mini SOC](./Mini-SOC-Wazuh-Active-Directory)
   — full attack simulation on AD, Wazuh SIEM, MITRE ATT&CK, custom detection rules, incident report
 
 ## Skills Practiced
@@ -44,6 +44,11 @@ Active Directory and security concepts.
 - DDoS attack simulation and detection
 - Wireshark network traffic analysis
 - Incident detection and alert configuration
+- SIEM deployment and configuration (Wazuh)
+- Active Directory attack simulation (Password Spraying, Kerberoasting)
+- Custom SIEM rule development
+- MITRE ATT&CK framework mapping
+- Incident response and reporting
   
 ## What I Learned
 - How Active Directory manages users and permissions
@@ -55,5 +60,10 @@ Active Directory and security concepts.
 - How to correlate network attacks with system metrics
 - How automated alerting works in enterprise environments
 - How DDoS traffic appears in monitoring tools
+- How to deploy and configure a SIEM from scratch
+- How real-world Active Directory attacks work (Kerberoasting, Password Spraying)
+- How to detect attacks using Windows Event IDs
+- How to write custom Wazuh detection rules mapped to MITRE ATT&CK
+- How to produce a professional SOC incident report
   
 
