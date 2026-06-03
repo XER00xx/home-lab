@@ -77,10 +77,6 @@ SVC:    sqlsvc (Kerberoasting target — SPN: MSSQLSvc/dc01.homelab.local:1443)
 
 Wazuh agents were deployed on both Windows machines (DC01 and WIN10) and connected to the central Wazuh Manager. Baseline event collection was verified by confirming the appearance of Windows Security Event IDs in the dashboard.
 
-**Event IDs monitored at this stage:**
-- `4624` — Logon Success
-- `4625` — Logon Failure
-- `4688` — Process Creation
 
 **Screenshot — ![Wazuh services active and running on Ubuntu Server](Screenshots/ss1.jpg)
 > Terminal output on Ubuntu Server showing all three Wazuh components (`wazuh-manager`, `wazuh-indexer`, `wazuh-dashboard`) in `active (running)` state — confirming successful deployment.
@@ -160,7 +156,7 @@ impacket-GetUserSPNs homelab.local/admin -dc-ip 192.168.10.1 -request
 > Kali Linux terminal showing Impacket's GetUserSPNs output — `sqlsvc` account discovered with SPN, and the full `$krb5tgs$23$` hash returned. This hash represents a stolen Kerberos service ticket.
 
 **Screenshot — ![Hashcat cracking RC4 Kerberos TGS hash offline - password recovered](Screenshots/ss17.jpg)**
-> Wazuh Security Events showing Event,showing the RC4 hash being cracked and ID 4769 (Kerberos Service Ticket Requested) with RC4 encryption type (0x17) — triggering custom rule 100003 "Possible Kerberoasting Attack".
+> Wazuh Security Events showing Event,showing the RC4 hash being cracked and  (Kerberos Service Ticket Requested) with RC4 encryption type (0x17) — triggering custom rule 100003 "Possible Kerberoasting Attack".
 
 ---
 
