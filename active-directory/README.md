@@ -34,10 +34,10 @@ OU structure, and Group Policy enforcement.
 ![OU Structure](ss2.jpg)
 *Organizational Units — IT_Department and HR_Department*
 
-![GPO](ss3.jpg)
+![GPO](ss4.jpg)
 *IT_Security_Policy GPO linked to IT_Department*
 
-![Server IP](ss4.jpg)
+![Server IP](ss3.jpg)
 *Windows Server 2022 static IP configuration — 192.168.10.1*
 
 ![Domain Properties](ss6.jpg)
