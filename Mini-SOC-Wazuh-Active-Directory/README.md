@@ -93,10 +93,10 @@ A password spraying attack was launched from Kali Linux (192.168.10.4) against a
 **MITRE ATT&CK:** [T1110 — Brute Force](https://attack.mitre.org/techniques/T1110/)
 
 **Screenshot — ![Password Spraying attack executed from Kali Linux via CrackMapExec](Screenshots/ss8.jpg)**
-> Kali Linux terminal showing CrackMapExec executing a spray against the domain — multiple `[-]` failures visible for each user account, generating Event ID 4625 on the Domain Controller.
+> Kali Linux terminal showing CrackMapExec executing a spray against the domain — multiple `[-]` failures visible for each user account, generating Event on the Domain Controller.
 
 **Screenshot — ![Wazuh detecting multiple failed logon attempts - Event ID 4625](Screenshots/ss9.jpg)**
-> Wazuh Security Events view filtered to show a spike of Event ID 4625 (Logon Failure) events — all sourced from attacker IP 192.168.10.4 within a short timeframe, triggering custom rule 100002 (Multiple Failed Logon Attempts).
+> Wazuh Security Events view filtered to show a spike of Logon Failure events — all sourced from attacker IP 192.168.10.4 within a short timeframe, triggering custom rule 100002 (Multiple Failed Logon Attempts).
 
 ---
 
@@ -114,7 +114,7 @@ Get-ComputerInfo
 ```
 
 **Screenshot — ![PowerShell reconnaissance commands executed on WIN10 workstation](Screenshots/ss10.jpg)**
-> PowerShell terminal on WIN10 showing the execution of recon commands. Event ID 4688 (Process Creation) was generated for each command, captured by the Wazuh agent and forwarded to SIEM.
+> PowerShell terminal on WIN10 showing the execution of recon commands. Event Process Creation was generated for each command, captured by the Wazuh agent and forwarded to SIEM.
 
 **Screenshot — ![Wazuh custom rule 100001 triggering on suspicious PowerShell execution](Screenshots/ss11.jpg)**
 > Wazuh alert dashboard showing custom rule 100001 firing — "Suspicious PowerShell Execution Detected" — with the full command-line visible in the event details.
@@ -200,7 +200,7 @@ Three custom rules were written and deployed in `/var/ossec/etc/rules/local_rule
 </group>
 ```
 
-**Screenshot —![Wazuh custom rule 100003 triggering on Kerberoasting - Event ID 4769 RC4](Screenshots/ss19.jpg)**
+**Screenshot —![Wazuh custom rule 100003 triggering on Kerberoasting - Event RC4](Screenshots/ss19.jpg)**
 > nano editor on Ubuntu Server showing the `local_rules.xml` file with all three custom rules — demonstrating the ability to write and deploy custom SIEM detection logic beyond out-of-the-box capabilities.
 
 ---
@@ -252,7 +252,7 @@ A formal incident report was produced documenting the full attack scenario, time
 
 ## 🔑 Key Takeaways
 
-- **Kerberoasting is silent without proper monitoring** — Event ID 4769 with RC4 (0x17) is the tell-tale sign, but only if you're collecting and analysing Kerberos ticket events.
+- **Kerberoasting is silent without proper monitoring** — Event with RC4 (0x17) is the tell-tale sign, but only if you're collecting and analysing Kerberos ticket events.
 - **Service accounts with weak passwords are a critical risk** — even with a strong-looking hash, offline cracking with a wordlist is fast and effective.
 - **Custom SIEM rules matter** — out-of-the-box Wazuh won't catch everything. Writing targeted rules for your environment significantly improves detection fidelity.
 - **MITRE ATT&CK is the common language of threat detection** — mapping every alert to a technique ID enables faster triage and better communication between SOC tiers.
